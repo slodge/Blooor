@@ -1,6 +1,7 @@
 using System;
 using Ahwa.Attila.Core.Android.Models;
 using Ahwa.Attila.Core.Android.ViewModels.BaseViewModels;
+using Ahwa.Attila.Core.Android.ViewModels.ScanViewModels;
 using Cirrious.MvvmCross.Commands;
 using Cirrious.MvvmCross.ExtensionMethods;
 using Cirrious.MvvmCross.Interfaces.Commands;
@@ -14,6 +15,7 @@ namespace Ahwa.Attila.Core.Android.ViewModels.ProductViewModels
     public abstract class BaseEditProductViewModel<T>: BaseEditObjectViewModel<Product>
         , IMvxServiceConsumer<IMvxZXingBarCodeReaderTask>
         , IMvxServiceConsumer<IMvxPictureChooserTask>
+        , IMvxServiceConsumer<IScanResultService>
         where T : Product, new()
     {
         private const int IMAGE_SIZE = 640;
@@ -48,7 +50,8 @@ namespace Ahwa.Attila.Core.Android.ViewModels.ProductViewModels
                 {
                     try
                     {
-                        this.GetService<IMvxZXingBarCodeReaderTask>().ReadBarCode(ProcessBarCode);
+                        this.RequestNavigate<ScanViewModel>();
+                        //this.GetService<IMvxZXingBarCodeReaderTask>().ReadBarCode(ProcessBarCode);
                     }
                     catch (Exception exception)
                     {
@@ -92,9 +95,14 @@ namespace Ahwa.Attila.Core.Android.ViewModels.ProductViewModels
             }
         }
      
-        private void ProcessBarCode(string barCodeValue)
+        public void UpdateViewModelIfScanResultAvailable()
         {
-            Model.BarCode = barCodeValue;
+            var service = this.GetService<IScanResultService>();
+            string barCodeValue;
+            if (service.TryPopResult(out barCodeValue))
+            {
+                Model.BarCode = barCodeValue;
+            }
         }
 
         private void SaveImage(Stream image)

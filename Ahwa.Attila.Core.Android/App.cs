@@ -1,6 +1,7 @@
 using Ahwa.Attila.Core.Android.ApplicationObjects;
 using Ahwa.Attila.Core.Android.Interface;
 using Ahwa.Attila.Core.Android.Models;
+using Ahwa.Attila.Core.Android.Services;
 using Cirrious.MvvmCross.Application;
 using Cirrious.MvvmCross.ExtensionMethods;
 using Cirrious.MvvmCross.Interfaces.ServiceProvider;
@@ -16,6 +17,7 @@ namespace Ahwa.Attila.Core.Android
         , IMvxServiceProducer<IMvxStartNavigation>
         , IMvxServiceProducer<IDataStore>
         , IMvxServiceProducer<IMvxViewModelLocatorAnalyser>
+        , IMvxServiceProducer<IScanResultService>
     {
         public App()
         {
@@ -23,6 +25,10 @@ namespace Ahwa.Attila.Core.Android
             this.RegisterServiceInstance<IMvxStartNavigation>(startApplicationObject);
             MvxAndroidServiceProvider.Instance.RegisterServiceType<IMvxZXingBarCodeReaderTask, MvxZXingBarCodeReaderTask>();
             
+            // set up the services
+            var scanResultService = new ScanResultService();
+            this.RegisterServiceInstance<IScanResultService>(scanResultService);
+
             // set up the model
             var dataStore = new DataStore();
             this.RegisterServiceInstance<IDataStore>(dataStore);

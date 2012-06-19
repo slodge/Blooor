@@ -1,6 +1,7 @@
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Blooor.dll
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Cirrious.MvvmCross.Android.dll
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Newtonsoft.Json.MonoDroid.dll
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Cirrious.MvvmCross.Binding.Android.dll
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Ahwa.Attila.Core.Android.dll
-C:\Projects\Attila\Blooor\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Ahwa.MVVMCrossExtensions.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Blooor.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Cirrious.MvvmCross.Android.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Newtonsoft.Json.MonoDroid.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Cirrious.MvvmCross.Binding.Android.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Ahwa.Attila.Core.Android.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\Ahwa.MVVMCrossExtensions.dll
+C:\Users\Stuart\Documents\GitHub\Blooor\Ahwa.Attila.Core.UI\bin\Debug\zxing.MonoDroid.dll

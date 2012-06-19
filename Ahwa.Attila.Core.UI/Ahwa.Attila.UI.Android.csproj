@@ -73,6 +73,7 @@
     <Compile Include="Views\Product\ProductDetailsView.cs" />
     <Compile Include="Views\Product\ProductListView.cs" />
     <Compile Include="Views\Product\ProductNewView.cs" />
+    <Compile Include="Views\Scan\ScanView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -174,6 +175,10 @@
     <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json\Newtonsoft.Json.MonoDroid.csproj">
       <Project>{E6C3413C-919B-486D-8B6C-225CBD921B98}</Project>
       <Name>Newtonsoft.Json.MonoDroid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zxing.MonoDroid\zxing.MonoDroid.csproj">
+      <Project>{F5478880-E0B9-4A2A-82FE-3902DD890BD0}</Project>
+      <Name>zxing.MonoDroid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,12 +1,13 @@
 
 using Ahwa.Attila.Core.Android.ViewModels.BaseViewModels;
+using Ahwa.Attila.Core.Android.ViewModels.ProductViewModels;
 using Android.Views;
 
 namespace Ahwa.Attila.UI.Android.Views.Product
 {
     public class BaseProductEditView<TViewModel> :
         BaseView<TViewModel>
-        where TViewModel : BaseEditObjectViewModel<Attila.Core.Android.Models.Product>
+        where TViewModel : BaseEditProductViewModel<Attila.Core.Android.Models.Product>
     {
         private const int save_menu = Resource.Id.save_product;
         private const int content = Resource.Layout.ProductEditView;
@@ -21,6 +22,13 @@ namespace Ahwa.Attila.UI.Android.Views.Product
         protected override void OnViewModelSet()
         {
             SetContentView(content);            
+        }
+
+        protected override void OnCreate(global::Android.OS.Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            ViewModel.UpdateViewModelIfScanResultAvailable();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Binding.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newtonsoft.Json.MonoDroid", "Newtonsoft.Json\Newtonsoft.Json\Newtonsoft.Json.MonoDroid.csproj", "{E6C3413C-919B-486D-8B6C-225CBD921B98}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{BC821519-317D-4FE3-8F2A-48317D31A759}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zxing.MonoDroid", "zxing.MonoDroid\zxing.MonoDroid.csproj", "{F5478880-E0B9-4A2A-82FE-3902DD890BD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,10 @@ Global
 		{E6C3413C-919B-486D-8B6C-225CBD921B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6C3413C-919B-486D-8B6C-225CBD921B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6C3413C-919B-486D-8B6C-225CBD921B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5478880-E0B9-4A2A-82FE-3902DD890BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5478880-E0B9-4A2A-82FE-3902DD890BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5478880-E0B9-4A2A-82FE-3902DD890BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5478880-E0B9-4A2A-82FE-3902DD890BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +67,6 @@ Global
 		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9} = {280491DD-1CB1-4573-A0A7-57CB7AD9DF97}
 		{E6C3413C-919B-486D-8B6C-225CBD921B98} = {280491DD-1CB1-4573-A0A7-57CB7AD9DF97}
 		{62ED89CF-F42B-49BA-B9A8-53FFE04AC65F} = {029179FE-9EBB-4A01-8301-4E9342C95EAE}
+		{F5478880-E0B9-4A2A-82FE-3902DD890BD0} = {BC821519-317D-4FE3-8F2A-48317D31A759}
 	EndGlobalSection
 EndGlobal
